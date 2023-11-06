@@ -1,9 +1,10 @@
 #!/usr/bin/env python3
 
-from django.db import models
 from django.contrib.auth.models import AbstractUser
+from models.base_model import BaseModel
 
-class User(AbstractUser):
+
+class User(AbstractUser, BaseModel):
     """
     User class
     """

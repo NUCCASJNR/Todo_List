@@ -1,7 +1,7 @@
-from django.db import models
+from models.base_model import BaseModel, models
 from models.user import User
 
-class Task(models.Model):
+class Task(BaseModel):
     """
     Task class
     """
