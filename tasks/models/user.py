@@ -12,4 +12,5 @@ class User(AbstractUser):
     def __str__(self):
         return f'Welcome {self.username}'
     
-    
+    class Meta:
+        db_table = 'users'
