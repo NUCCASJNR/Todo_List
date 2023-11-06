@@ -1,12 +1,12 @@
-from models.base_model import BaseModel, models
-from models.user import User
+from tasks.models.base_model import BaseModel, models
+from tasks.models.user import User
 
 class Task(BaseModel):
     """
     Task class
     """
     user = models.ForeignKey(User, on_delete=models.CASCADE)
-    title = models.CharField(max_length==200)
+    title = models.CharField(max_length=200)
     description = models.TextField()
     completed = models.BooleanField(default=False)
     

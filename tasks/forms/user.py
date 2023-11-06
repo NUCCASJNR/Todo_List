@@ -1,6 +1,6 @@
 from django import forms
 from django.contrib.auth.forms import UserCreationForm
-from models.user import User
+from tasks.models.user import User
 
 class UserForm(UserCreationForm):
     email = forms.EmailField(required=True) 

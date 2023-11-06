@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth.decorators import login_required
-from forms.task import TaskForm
-from models.task import Task
+from tasks.forms.task import TaskForm
+from tasks.models.task import Task
 
 @login_required
 def add_task(request):

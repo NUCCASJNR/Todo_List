@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 from django.contrib.auth.models import AbstractUser
-from models.base_model import BaseModel, models
+from tasks.models.base_model import BaseModel, models
 
 
 class User(AbstractUser, BaseModel):
@@ -14,4 +14,4 @@ class User(AbstractUser, BaseModel):
         return f'Welcome {self.username}'
     
     class Meta:
-        db_table = 'users'
+        db_table = 'task_users'

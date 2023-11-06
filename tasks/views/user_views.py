@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth import authenticate, login, logout
-from  forms.user import UserForm
-from models.user import User
+from tasks.forms.user import UserForm
+from tasks.models.user import User
 
 def register(request):
     """
@@ -18,4 +18,4 @@ def register(request):
             return redirect('view_tasks')
     else:
         form = UserForm()
-    return render(request, 'tasks/register.html', {'form': form})
+    return render(request, 'tasks/signup.html', {'form': form})

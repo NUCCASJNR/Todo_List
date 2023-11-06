@@ -2,4 +2,6 @@ Todo_Venv
 Todo_List/__pycache__
 tasks/__pycache__
 tasks/migrations/__pycache__
-`
+tasks/models/__pycache__
+tasks/forms/__pycache__
+tasks/views/__pycache__
