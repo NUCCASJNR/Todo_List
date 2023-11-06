@@ -19,3 +19,17 @@ class BaseModel(models.Model):
     
     class Meta:
         abstract = True
+    
+    @classmethod
+    def create(cls, **kwargs):
+        return cls.objects.create(**kwargs)
+    
+    @classmethod
+    def find_obj(cls, **kwargs):
+        query = cls.objects.filter(**kwargs).first()
+        return query
+    
+    @classmethod
+    def find_all_objs(cls, **kwargs):
+        query = cls.objects.filter(**kwargs).all()
+        return query
