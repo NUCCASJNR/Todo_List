@@ -4,10 +4,12 @@
     <title>View Tasks</title>
 </head>
 <body>
+    <h1>Welcome, {{ request.user.username }}</h1>
     <h2>Your Tasks</h2>
     <ul>
         {% for task in tasks %}
             <li>{{ task.title }}</li>
+            <h3>{{ task.description }}</h3>
         {% empty %}
             <li>No tasks yet.</li>
         {% endfor %}

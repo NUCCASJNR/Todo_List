@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect
 from django.contrib.auth.decorators import login_required
 from tasks.forms.task import TaskForm
 from tasks.models.task import Task
+from tasks.models.user import CustomUser
 
 @login_required
 def add_task(request):
@@ -18,5 +19,6 @@ def add_task(request):
 
 @login_required
 def view_tasks(request):
-    tasks = Task.find_all_objs(user=request.user)
+    tasks = Task.find_all_objs(user_id=request.user.id)
+    # user = CustomUser.find_obj(id=tasks.user_id)
     return render(request, 'tasks/view_tasks.html', {'tasks': tasks})
