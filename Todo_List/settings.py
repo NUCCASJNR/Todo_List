@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-v48@ls@w78--gaca(4+o20=bddh=x%=m9m6*w*+s8lq_d@_(fi
 DEBUG = True
 
 ALLOWED_HOSTS = []
-
+AUTH_USER_MODEL = 'tasks.CustomUser'
 
 # Application definition
 

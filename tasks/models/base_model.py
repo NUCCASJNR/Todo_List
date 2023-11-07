@@ -31,5 +31,5 @@ class BaseModel(models.Model):
     
     @classmethod
     def find_all_objs(cls, **kwargs):
-        query = cls.objects.filter(**kwargs).all()
+        query = cls.objects.filter(**kwargs)
         return query

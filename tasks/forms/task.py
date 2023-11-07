@@ -1,5 +1,5 @@
 from django import forms
-from models.task import Task
+from tasks.models.task import Task
 
 class TaskForm(forms.ModelForm):
     """Task Form"""
